@@ -7,7 +7,6 @@ $password = $_POST['Password'];
 
 $login = mysqli_query($mysqli, "SELECT * FROM user WHERE username='$username' AND password='$password'");
 
-// Periksa apakah query berhasil dieksekusi
 if ($login) {
     $cek = mysqli_num_rows($login);
 
@@ -17,11 +16,11 @@ if ($login) {
         if ($data['level'] == "admin") {
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "admin";
-            header("Location: admin/index.php");
+            header("Location: admin/user/index.php");
         } else if ($data['level'] == "user") {
             $_SESSION['username'] = $username;
             $_SESSION['level'] = "user";
-            header("Location: user/landing.php");
+            header("Location: user/index.php");
         } else {
             header("Location: index.php");
         }
@@ -29,7 +28,6 @@ if ($login) {
         header("Location: index.php?pesan=gagal");
     }
 } else {
-    // Tampilkan pesan error jika query tidak berhasil dieksekusi
     echo "Error: " . mysqli_error($mysqli);
 }
 ?>

@@ -1,0 +1,208 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #fff;
+    color: var(--text-color);
+
+}
+
+header{
+    position: flex;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: ease .40s;
+    background-color: #BD424B;
+}
+
+.logo{
+    font-size: 30px;
+    font-weight: 550;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 22px;
+    border-radius: 4px;
+    transition: ease .40s;
+}
+
+.navbar a:hover{
+    background: #fff;
+    color: #000000;
+    box-shadow: 5px 10px 30px rgb(85 85 85 / 20%);
+    border-radius: 4px;
+}
+
+.menu-icon{
+    color: var(--text-color);
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+.transaction-history {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.transaction-history h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.transaction {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.transaction h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.transaction p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.transaction p span {
+    font-weight: bold;
+    color: #333;
+}
+
+.transaction form {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.transaction input[type="submit"] {
+    padding: 8px 16px;
+    border: none;
+    background: #28a745;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.transaction input[type="submit"]:hover {
+    background: #218838;
+}
+
+.transaction input[type="submit"].btn-delete {
+    background: #dc3545;
+}
+
+.transaction input[type="submit"].btn-delete:hover {
+    background: #c82333;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button[name="finish_kuliner"],
+button[name="cancel_kuliner"],
+button[name="finish_wisata"],
+button[name="cancel_wisata"] {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+button.rating-btn {
+    background-color: #c68842;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button.rating-btn:hover {
+    background-color: #67420a;
+}
+
+.footer {
+    background-color: #781b1b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer a:hover{
+    color: rgb(66, 69, 69);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .navbar li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .navbar li a {
+        font-size: 20px;
+    }
+
+    #menu-icon {
+        display: block;
+    }
+
+    #menu-icon.active + .navbar {
+        display: flex;
+    }
+}
